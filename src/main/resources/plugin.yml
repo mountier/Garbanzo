@@ -6,7 +6,10 @@ prefix: [ GARBANZO ]
 load: STARTUP
 authors: [ Mountier ]
 
-commands:
+commands
+  afk:
+    usage: /afk
+    description: Change your AFK status
   color:
     usage: /color \#<hexCode>
     description: Change your username color

@@ -1,0 +1,11 @@
+# GARBANZO PLUGIN SETTINGS
+#
+#The amount of time (in minutes) it takes to mark someone as AFK after they stop moving
+afk-timeout-time: 5
+#
+#These will be displayed under the server name on the server selection screen, cycling through each message
+messages-of-the-day:
+  - "Test 1"
+  - "Test 2"
+  - "Test 3"
+  - "Test 4"

@@ -25,7 +25,7 @@ public class ColorCommand implements CommandExecutor {
             if (match.find()) {
                 String colorcode = code.substring(match.start(), match.end());
                 ChatColor color = ChatColor.of(colorcode);
-                player.sendMessage("Your username has now been changed to " + color + " this color.");
+                player.sendMessage("Your username has now been changed to " + color + "this color.");
                 user.setNameColor(colorcode);
                 return true;
             }
