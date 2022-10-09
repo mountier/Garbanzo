@@ -53,7 +53,7 @@ public final class Main extends JavaPlugin {
     }
 
     public void loop() {
-        Bukkit.getScheduler().scheduleSyncDelayedTask(this, new Runnable() {
+        Bukkit.getScheduler().scheduleSyncRepeatingTask(this, new Runnable() {
                     @Override
                     public void run() {
                         for(Player p : Bukkit.getOnlinePlayers()) {
@@ -66,7 +66,7 @@ public final class Main extends JavaPlugin {
                         }
                     }
                 }
-        , 20L);
+        , 20L, 20L);
     }
 
     public static FileManager fileManager() {
