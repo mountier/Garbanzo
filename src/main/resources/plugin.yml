@@ -6,7 +6,7 @@ prefix: [ GARBANZO ]
 load: STARTUP
 authors: [ Mountier ]
 
-commands
+commands:
   afk:
     usage: /afk
     description: Change your AFK status

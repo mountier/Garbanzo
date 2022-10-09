@@ -30,7 +30,7 @@ public class ServerEvents implements Listener {
 
     @EventHandler
     public void onRefresh(PaperServerListPingEvent event) {
-        event.setMotd(Main.getNextMOTD());
+        event.setMotd(Main.format(Main.getNextMOTD()));
     }
 
     @EventHandler
@@ -39,7 +39,7 @@ public class ServerEvents implements Listener {
         User user = Main.userManager().getUser(player);
         user.updateMovement();
 
-        event.setFormat(user.getNameColor() + player.getName() + ChatColor.WHITE + ": " + event.getMessage());
+        event.setFormat(user.getNameColor() + player.getName() + ChatColor.WHITE + ": " + Main.format(event.getMessage()));
     }
 
     @EventHandler

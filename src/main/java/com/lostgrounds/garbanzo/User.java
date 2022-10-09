@@ -44,6 +44,8 @@ public class User {
 
     public void updateMovement() {
         _lastInteractionTime=System.nanoTime();
+        if(_isAfk)
+            changeAfkStatus();
     }
     public boolean isAfk() {
         return _isAfk;
@@ -52,11 +54,11 @@ public class User {
     public void changeAfkStatus() {
         if(_isAfk) {
             _isAfk = false;
-            Bukkit.broadcastMessage(ChatColor.GRAY +"" + ChatColor.ITALIC + _player.getName() + " is no longer AFK.");
+            Bukkit.broadcastMessage(ChatColor.GRAY +"" + ChatColor.ITALIC + "* " + _player.getName() + " is no longer AFK. *");
             _player.setPlayerListName(ChatColor.WHITE + _player.getName());
         } else {
             _isAfk = true;
-            Bukkit.broadcastMessage(ChatColor.GRAY +"" + ChatColor.ITALIC + _player.getName() + " is now AFK.");
+            Bukkit.broadcastMessage(ChatColor.GRAY +"" + ChatColor.ITALIC + "* " + _player.getName() + " is now AFK. *");
             _player.setPlayerListName(ChatColor.GRAY + "" + ChatColor.ITALIC + _player.getName());
         }
     }
