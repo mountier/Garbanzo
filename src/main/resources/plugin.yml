@@ -1,0 +1,7 @@
+name: Garbanzo
+version: '${project.version}'
+main: com.lostgrounds.garbanzo.Main
+api-version: 1.19
+prefix: [ GARBANZO ]
+load: STARTUP
+authors: [ Mountier ]
