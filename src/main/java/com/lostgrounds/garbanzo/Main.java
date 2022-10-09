@@ -59,10 +59,11 @@ public final class Main extends JavaPlugin {
                         for(Player p : Bukkit.getOnlinePlayers()) {
                             User user = userManager().getUser(p);
                             long elapsed = System.nanoTime() - user.getLastInteraction();
-                            long elapsedMinutes = TimeUnit.MINUTES.convert(elapsed, TimeUnit.MINUTES);
+                            long elapsedMinutes = TimeUnit.MINUTES.convert(elapsed, TimeUnit.NANOSECONDS);
 
                             if(elapsedMinutes >= (afkTimeoutLength + 0.0))
-                                user.changeAfkStatus();
+                                if(!user.isAfk())
+                                  user.changeAfkStatus();
                         }
                     }
                 }
